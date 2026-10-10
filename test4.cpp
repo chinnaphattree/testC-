@@ -2,13 +2,15 @@
 using namespace std;
 
 int main() {
-    int arr[5];
-    for (int i = 0; i < 5; i++) {
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
-    for (int i = 0; i < 5 - 1; i++) {
-        for (int j = 0; j < 5 - i - 1; j++) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
             if (arr[j] > arr[j + 1]) {
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
@@ -17,9 +19,10 @@ int main() {
         }
     }
 
-    for (int i = 0; i < 5; i++) {
-        cout << "Array ["<<i+1<<"]: " << arr[i] << endl;
+    for (int i = 0; i < n; i++) {
+        cout << "Array ["<<i<<"]: " << arr[i] << endl;
     }
 
     return 0;
 }
+
